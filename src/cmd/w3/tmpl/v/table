@@ -1,0 +1,19 @@
+<table>
+	{{range $val := .}}
+		<tr>
+			<td>{{$val.Time}}</td>
+			<td>{{$val.Problems}}</td>
+			<td>
+				{{$len := len $val.Nodes}}
+				{{ $lastI := sum $len -1}}
+				{{range $i, $id := $val.Nodes}}
+					{{if eq $i $lastI | not}}
+						{{$id}}, {{printf " "}}
+					{{else}}
+						{{$id}}
+					{{end}}
+				{{end}}
+			</td>
+		</tr>
+	{{end}}
+</table>

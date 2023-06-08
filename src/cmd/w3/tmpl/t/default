@@ -1,0 +1,8 @@
+<!doctype html>
+<html><head>
+	<title> Проблемы </title>
+</head><body>
+	<div id="content">
+		{{block "#content" .}} No body {{end}}
+	</div>
+</body></html>
